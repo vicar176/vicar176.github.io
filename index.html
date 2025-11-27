@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Victor S. Arias González — Senior Java Software Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f3f6fb; --card:#ffffff; --muted:#556075; --accent:#0b7285; --accent-2:#0ea5a4; --glass:rgba(255,255,255,0.6);
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);margin:0;color:#0b1220;-webkit-font-smoothing:antialiased}
+    .container{max-width:var(--max-width);margin:32px auto;padding:18px}
+
+    .controls{display:flex;gap:10px;justify-content:flex-end;margin-bottom:18px}
+    .btn{background:var(--accent);color:white;padding:8px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:700;letter-spacing:0.2px}
+    .btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(11,114,133,0.14)}
+
+    .resume-wrap{display:grid;grid-template-columns:1fr 320px;gap:22px}
+
+    /* Left — main content */
+    .panel{background:linear-gradient(180deg,var(--card),#fbfdff);padding:24px;border-radius:12px;box-shadow:0 10px 30px rgba(11,17,26,0.06)}
+    header{display:flex;gap:18px;align-items:center}
+    .avatar{width:86px;height:86px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:28px}
+    h1{margin:0;font-size:20px}
+    .role{color:var(--muted);margin-top:4px;font-weight:600}
+
+    .meta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}
+    .pill{background:#eef7f8;color:var(--accent);padding:6px 10px;border-radius:999px;font-size:13px}
+
+    .section{margin-top:18px}
+    .section h3{margin:0 0 12px 0;font-size:13px;color:#0b1220}
+    .summary{font-size:14px;color:#0f172a;line-height:1.5}
+
+    .experience .job{padding:14px;border-radius:10px;background:#ffffff;border:1px solid rgba(11,17,26,0.04);margin-bottom:12px}
+    .job h4{margin:0;font-size:15px}
+    .meta{font-size:13px;color:var(--muted);margin-top:6px}
+    .bullets{margin:10px 0 0 18px}
+    .tech{margin-top:8px;font-size:13px;color:var(--muted)}
+
+    /* Right — side bar */
+    .aside{position:relative;padding:22px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfdff);box-shadow:0 8px 22px rgba(11,17,26,0.04)}
+    .aside h4{margin:0 0 8px 0;font-size:13px}
+    .contact a{color:var(--accent);text-decoration:none}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* Contact UI */
+  .contact-icons{display:flex;gap:14px;margin:12px 0;align-items:center}
+  .icon-link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:#eef7f8;color:var(--accent);text-decoration:none;transition:all 0.14s ease;cursor:pointer;line-height:0}
+  .icon-link:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+  .icon-link svg{width:20px;height:20px;display:block;margin:auto}
+  /* WhatsApp icon: use the same .icon-link styles as the other icons so it behaves consistently */
+  /* No special per-icon overrides here. The phone icon will inherit .icon-link and .icon-link svg sizing. */
+    .print-only{display:none}    .skill-list{display:flex;flex-wrap:wrap;gap:8px}
+    .skill-chip{background:#f0f7f7;padding:6px 10px;border-radius:8px;font-weight:600;color:#0b1220;font-size:13px}
+
+    /* Timeline look */
+    .timeline{border-left:2px solid rgba(11,17,26,0.04);padding-left:16px}
+
+    @media (max-width:920px){
+      .resume-wrap{grid-template-columns:1fr}
+    }
+
+    @media print{
+      body{background:white}
+      .controls{display:none}
+      .container{margin:0;padding:0}
+      .resume-wrap{grid-template-columns:1fr 300px}
+      .panel, .aside{box-shadow:none;border-radius:0}
+      /* Print: hide icons and show text-only contact info */
+      .icon{display:none}
+      .screen-only{display:none}
+      .print-only{display:block}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="controls">
+      <button class="btn" id="printBtn" title="Save / Print">
+        <!-- Download icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+      </button>
+    </div>
+
+    <div class="resume-wrap">
+      <main class="panel" aria-labelledby="name">
+        <header>
+          <div class="avatar" id="avatar">VA</div>
+          <div>
+            <h1 id="fullName">Victor S. Arias González</h1>
+            <div class="role" id="role">Senior Java Software Engineer</div>
+            <div class="meta-row" id="metaRow">
+              <div class="pill" id="location">San José, Costa Rica</div>
+              <div class="pill" id="availability">Open to remote roles</div>
+            </div>
+          </div>
+        </header>
+
+        <section class="section" id="summarySection">
+          <h3>Summary</h3>
+          <div class="summary" id="summary" style="text-align: justify;">Experienced backend engineer specializing in Java and cloud-native systems. I design resilient microservices, lead refactors to improve scalability, and introduce engineering practices that reduce incidents and accelerate delivery.</div>
+        </section>
+
+        <section class="section" id="experienceSection">
+          <h3>Experience</h3>
+          <div class="experience timeline" id="experienceList"></div>
+        </section>
+
+        <!-- education moved to aside for compact layout -->
+      </main>
+
+      <aside class="aside" aria-labelledby="contactHeading">
+        <div class="contact" id="contact">
+          <h4 id="contactHeading">Contact</h4>
+          <!-- Screen with icons only -->
+          <div class="contact-icons screen-only">
+            <!-- Gmail -->
+            <a id="emailIcon" href="#" title="Send email" class="icon-link" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+              </svg>
+            </a>
+            <!-- WhatsApp -->
+            <a id="phoneIcon" href="#" title="WhatsApp" class="icon-link" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a id="linkedinIcon" href="#" title="LinkedIn profile" class="icon-link" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.731-2.004 1.438-.103.25-.129.599-.129.948v5.419h-3.554s.05-8.736 0-9.646h3.554v1.364c.43-.664 1.199-1.608 2.928-1.608 2.136 0 3.745 1.398 3.745 4.406v5.484zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.704 0-.948.77-1.704 1.959-1.704 1.188 0 1.914.756 1.942 1.704 0 .946-.753 1.704-1.986 1.704zm1.581 11.019H3.656V9.806h3.262v10.646zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Print-only plain text -->
+          <div class="print-only small" id="contactPrint">
+            Email: <span id="emailPrint">vicar176@gmail.com</span>
+            <br>Phone: <span id="phonePrint">+506 8517 4202</span>
+            <br>LinkedIn: <span id="linkedinPrint">linkedin.com/in/victor-arias-sr-java/</span>
+          </div>
+        </div>
+        <div style="height:10px"></div>
+        <div style="border-top:1px solid rgba(11,17,26,0.06);margin-top:8px;padding-top:12px">
+          <h4>TECHNICAL SKILLS</h4>
+          <div class="skill-list" id="skillsList"></div>
+        </div>
+        <div style="height:10px"></div>
+        <div style="border-top:1px solid rgba(11,17,26,0.06);margin-top:8px;padding-top:12px">
+          <h4>Education</h4>
+          <div class="small" id="education">National University of Costa Rica — BS. in Computer System Engineer</div>
+        </div>
+
+        <div style="margin-top:16px">
+          <h4>Certifications</h4>
+          <div class="small" id="certifications">Oracle Certified Associate (OCA)</div>
+        </div>
+
+        <div style="margin-top:16px">
+          <h4>Languages</h4>
+          <div class="small" id="languages">Spanish (native), English (professional)</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    // Resume data (edit this object to customize)
+    const resume = {
+      name: 'Victor S. Arias González',
+      role: 'Senior Java Software Engineer',
+      email: 'vicar176@gmail.com',
+      phone: '+506 8517 4202',
+      linkedin: 'https://www.linkedin.com/in/victor-arias-sr-java/',
+      location: 'Heredia, Costa Rica',
+      availability: 'Remote roles only',
+      summary: 'Highly proficient Senior Software Engineer with 13+ years of experience specializing in Java development (Java 7-17) and complex, distributed systems. Expert in designing and implementing Microservices architectures, developing robust RESTful APIs, and deploying solutions across diverse technology stacks, including Spring Boot, AWS, Docker, and Kubernetes. Proven ability to quickly master new technologies, collaborate effectively in Agile environments, and drive projects from design to high-quality production deployment. Adept at problem-solving, optimizing performance, and ensuring scalability in fast-paced settings. Committed to continuous learning and applying best practices to deliver innovative software solutions that meet evolving business needs.',
+      technicalSkills: [
+        { title: 'Languages & Frameworks', items: ['Java (Core, 7, 8, 17)', 'Spring (Boot, MVC, Data, Security)', 'Hibernate', 'ReactJS', 'Python', 'Typescript', 'NextJS', 'Javascript'] },
+        { title: 'Databases', items: ['MySQL', 'PostgreSQL', 'MSSQL', 'Sybase', 'MongoDB', 'Couchbase'] },
+        { title: 'Cloud & DevOps', items: ['AWS (S3, EC2, SQS, CloudFront)', 'Docker', 'Kubernetes', 'Jenkins', 'TeamCity'] },
+        { title: 'Architecture & Tools', items: ['Microservices', 'REST Services', 'JDBC', 'JPA', 'Maven', 'Git', 'SVN', 'JWT', 'Oauth', 'Keycloak'] },
+        { title: 'Testing', items: ['JUnit', 'Mockito', 'Karma', 'Enzyme'] }
+      ],
+      experience: [
+        {
+          company: 'QAT Global',
+          title: 'Senior Java Software Engineer',
+          period: 'OCT 2024 – Present',
+          location: 'Costa Rica',
+          bullets: [
+            'Supported and maintained an existing application while simultaneously developing new REST APIs using Java 17 and Spring.',
+            'Contributed to frontend development by refactoring ReactJS class components into functional components and implementing unit tests using Karma and Enzyme.',
+            'Developed and optimized stored procedures for both MySQL and MSSQL databases.',
+            'Utilized AGILE methodologies, Docker, Kubernetes, and TeamCity for CI/CD.'
+          ],
+          tech: ['Java 17', 'Spring', 'React', 'Karma', 'Enzyme', 'MySQL', 'MSSQL', 'Docker', 'Kubernetes', 'TeamCity']
+        },
+        {
+          company: 'Freelance',
+          title: 'Senior Java Software Engineer (Freelance)',
+          period: 'APR 2023 – OCT 2024',
+          location: 'Remote',
+          bullets: [
+            'Led the design of a robust Microservices Architecture and corresponding database models.',
+            'Implemented Keycloak for user access management and secured all application endpoints.',
+            'Managed file storage on AWS S3, utilizing AWS CloudFront for secure content delivery and exposure.',
+            'Developed solutions using Java 17, Spring Boot, Spring Security, Docker, and the React/NextJS stack with Tailwind CSS.'
+          ],
+          tech: ['Java 17', 'Spring Boot', 'Spring Security', 'Keycloak', 'AWS S3', 'CloudFront', 'Docker', 'React', 'NextJS', 'Tailwind']
+        },
+        {
+          company: 'Gorilla Logic',
+          title: 'Senior Java Software Engineer',
+          period: 'JAN 2018 – MAR 2023',
+          location: 'Costa Rica',
+          bullets: [
+            'Provided comprehensive application maintenance and support, resolving software errors and adding new features to meet evolving client expectations and performance requirements.',
+            'Contributed to a high-volume application using Java 7/8, Spring Boot, Spring Data, Spring MVC, and Sybase with Kafka integration.'
+          ],
+          tech: ['Java 7/8', 'Spring Boot', 'Spring Data', 'Spring MVC', 'Sybase', 'Kafka']
+        },
+        {
+          company: 'Microfocus',
+          title: 'Senior Java Software Engineer',
+          period: 'MAR 2017 – DEC 2017',
+          location: 'Costa Rica',
+          bullets: [
+            'Designed and developed new features based on Java Core, utilizing native JDBC for data access across PostgreSQL and MySQL databases.',
+            'Collaborated with the QA team to ensure high-quality development and assisted in the onboarding and mentorship of new team members.'
+          ],
+          tech: ['Java', 'JDBC', 'PostgreSQL', 'MySQL']
+        },
+        {
+          company: 'Informatech',
+          title: 'Senior Java Developer',
+          period: 'SEP 2015 – MAR 2017',
+          location: 'Costa Rica',
+          bullets: [
+            'Participated in the architecture and design of a new Microservices-based system deployed over AWS (S3, SQS, EC2).',
+            'Developed and supported the existing software while building new REST APIs using Java 7/8, Spring Boot, Spring MVC, and Couchbase DB.'
+          ],
+          tech: ['Java 7/8', 'Spring Boot', 'Spring MVC', 'Couchbase', 'AWS']
+        },
+        {
+          company: 'Prodigious LatinAmerica',
+          title: 'Java Developer',
+          period: 'MAY 2013 – AUG 2015',
+          location: 'Costa Rica',
+          bullets: [
+            'Developed REST APIs and participated in a project migration from .Net to Java.',
+            'Managed code merges and production releases, participating actively in all AGILE ceremonies (stand-ups, sprint planning, retrospectives).'
+          ],
+          tech: ['Java', 'REST', '.NET migration']
+        },
+        {
+          company: 'Rivet Logic',
+          title: 'Junior Java Developer',
+          period: 'APR 2012 – MAY 2013',
+          location: 'Costa Rica',
+          bullets: [
+            'Developed and maintained Liferay components, including portlets and hooks, across Community and Enterprise versions, utilizing Java 7 and Maven.'
+          ],
+          tech: ['Java 7', 'Liferay', 'Maven']
+        }
+      ],
+      education: {school: 'National University of Costa Rica', degree: 'BS. in Computer System Engineer'},
+      certifications: ['Oracle Certified Associate (OCA)'],
+      languages: ['Spanish (native)', 'English (professional)']
+    };
+
+    // Rendering
+    function renderResume(data){
+      document.getElementById('fullName').textContent = data.name;
+      document.getElementById('role').textContent = data.role;
+      document.getElementById('avatar').textContent = initials(data.name);
+      document.getElementById('summary').textContent = data.summary;
+      
+      // screen icons - populate links
+      const emailIcon = document.getElementById('emailIcon');
+      if(emailIcon) emailIcon.href = 'https://mail.google.com/mail/u/0/?to=' + encodeURIComponent(data.email);
+      const phoneIcon = document.getElementById('phoneIcon');
+      if(phoneIcon) phoneIcon.href = 'https://wa.me/' + data.phone.replace(/\D/g,'');
+      const linkedinIcon = document.getElementById('linkedinIcon');
+      if(linkedinIcon) linkedinIcon.href = data.linkedin;
+      
+      // print-only spans
+      const emailPrint = document.getElementById('emailPrint'); if(emailPrint) emailPrint.textContent = data.email;
+      const phonePrint = document.getElementById('phonePrint'); if(phonePrint) phonePrint.textContent = data.phone;
+      const linkedinPrint = document.getElementById('linkedinPrint'); if(linkedinPrint) linkedinPrint.textContent = data.linkedin.replace(/^https?:\/\//,'');
+      
+      document.getElementById('location').textContent = data.location;
+      document.getElementById('availability').textContent = data.availability;
+
+      // Skills (categorized)
+      const skillsRoot = document.getElementById('skillsList'); skillsRoot.innerHTML = '';
+      if (Array.isArray(data.technicalSkills)) {
+        data.technicalSkills.forEach(cat => {
+          const catTitle = document.createElement('div');
+          catTitle.style.marginTop = '8px';
+          catTitle.style.fontSize = '13px';
+          catTitle.style.fontWeight = '700';
+          catTitle.textContent = cat.title;
+          skillsRoot.appendChild(catTitle);
+
+          const wrap = document.createElement('div');
+          wrap.className = 'skill-list';
+          (cat.items || []).forEach(s => {
+            const el = document.createElement('div'); el.className='skill-chip'; el.textContent=s; wrap.appendChild(el);
+          });
+          skillsRoot.appendChild(wrap);
+        });
+      } else if (Array.isArray(data.skills)) {
+        // fallback for older data shape
+        data.skills.slice(0,12).forEach(s => { const el = document.createElement('div'); el.className='skill-chip'; el.textContent=s; skillsRoot.appendChild(el);} );
+      }
+
+      // Experience
+      const expRoot = document.getElementById('experienceList'); expRoot.innerHTML = '';
+      data.experience.forEach(job => {
+        const jobEl = document.createElement('div'); jobEl.className='job';
+        jobEl.innerHTML = `<h4>${escapeHtml(job.title)} — ${escapeHtml(job.company)}</h4>`;
+        const meta = document.createElement('div'); meta.className='meta'; meta.textContent = `${job.period} • ${job.location}`; jobEl.appendChild(meta);
+        const ul = document.createElement('ul'); ul.className='bullets'; job.bullets.forEach(b=>{ const li=document.createElement('li'); li.textContent=b; ul.appendChild(li); }); jobEl.appendChild(ul);
+        const tech = document.createElement('div'); tech.className='tech'; tech.textContent = 'Tech: ' + job.tech.join(', '); jobEl.appendChild(tech);
+        expRoot.appendChild(jobEl);
+      });
+
+      document.getElementById('education').textContent = `${data.education.school} — ${data.education.degree}`;
+      document.getElementById('certifications').textContent = data.certifications.join(', ');
+      document.getElementById('languages').textContent = data.languages.join(', ');
+    }
+
+    function initials(name){ return name.split(' ').map(n=>n[0]).slice(0,2).join('').toUpperCase(); }
+    function escapeHtml(s){ return String(s).replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[c])); }
+
+    document.getElementById('printBtn').addEventListener('click', ()=>window.print());
+
+    renderResume(resume);
+  </script>
+</body>
+</html>
