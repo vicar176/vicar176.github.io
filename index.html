@@ -64,15 +64,84 @@
     }
 
     @media print{
-      body{background:white}
+      @page {
+        size: letter;
+        margin: 0.4in;
+      }
+      body{
+        background:white;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+      }
       .controls{display:none}
-      .container{margin:0;padding:0}
-      .resume-wrap{grid-template-columns:1fr 300px}
-      .panel, .aside{box-shadow:none;border-radius:0}
+      .container{margin:0;padding:0;max-width:100%}
+      .resume-wrap{
+        grid-template-columns:1fr 280px;
+        gap:16px;
+      }
+      .panel{
+        background:linear-gradient(180deg,var(--card),#fbfdff) !important;
+        box-shadow:none;
+        border-radius:10px;
+        padding:18px;
+        border:1px solid rgba(11,17,26,0.08);
+      }
+      .aside{
+        background:linear-gradient(180deg,#fff,#fbfdff) !important;
+        box-shadow:none;
+        border-radius:10px;
+        padding:16px;
+        border:1px solid rgba(11,17,26,0.08);
+      }
+      .avatar{
+        background:linear-gradient(135deg,var(--accent),var(--accent-2)) !important;
+        width:70px;
+        height:70px;
+        font-size:22px;
+      }
+      header{gap:14px}
+      h1{font-size:18px}
+      .role{font-size:14px}
+      .pill{
+        background:#eef7f8 !important;
+        color:var(--accent) !important;
+        padding:4px 8px;
+        font-size:12px;
+      }
+      .meta-row{gap:10px;margin-top:8px}
+      .section{margin-top:14px}
+      .section h3{font-size:12px;margin-bottom:8px}
+      .summary{font-size:12px;line-height:1.45}
+      .experience .job{
+        padding:10px 12px;
+        border-radius:8px;
+        background:#ffffff !important;
+        border:1px solid rgba(11,17,26,0.06);
+        margin-bottom:8px;
+        page-break-inside:avoid;
+      }
+      .job h4{font-size:13px}
+      .meta{font-size:11px;margin-top:4px}
+      .bullets{margin:6px 0 0 16px;font-size:11px;line-height:1.4}
+      .bullets li{margin-bottom:2px}
+      .tech{font-size:11px;margin-top:6px}
+      .aside h4{font-size:11px;margin-bottom:6px}
+      .small{font-size:11px;line-height:1.4}
+      .skill-chip{
+        background:#f0f7f7 !important;
+        color:#0b1220 !important;
+        padding:4px 8px;
+        font-size:11px;
+        border-radius:6px;
+      }
+      .skill-list{gap:5px}
+      .timeline{border-left:2px solid rgba(11,17,26,0.08);padding-left:12px}
       /* Print: hide icons and show text-only contact info */
       .icon{display:none}
       .screen-only{display:none}
       .print-only{display:block}
+      .contact-icons{display:none !important}
     }
   </style>
 </head>
