@@ -2,238 +2,826 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Victor S. Arias González — Senior Java Software Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Victor S. Arias González is a Senior Java Software Engineer with 13+ years in Java, microservices, REST APIs, and AI agent integrations." />
+  <meta name="author" content="Victor S. Arias González" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="canonical" href="https://vicar176.github.io/" />
+  <meta property="og:title" content="Victor S. Arias González — Senior Java Software Engineer" />
+  <meta property="og:description" content="Senior Java Software Engineer with 13+ years in Java, microservices, REST APIs, and AI agent integrations." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://vicar176.github.io/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    :root{
-      --bg:#f3f6fb; --card:#ffffff; --muted:#556075; --accent:#0b7285; --accent-2:#0ea5a4; --glass:rgba(255,255,255,0.6);
-      --max-width:980px;
-    }
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);margin:0;color:#0b1220;-webkit-font-smoothing:antialiased}
-    .container{max-width:var(--max-width);margin:32px auto;padding:18px}
-
-    .controls{display:flex;gap:10px;justify-content:flex-end;margin-bottom:18px}
-    .btn{background:var(--accent);color:white;padding:8px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:700;letter-spacing:0.2px}
-    .btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(11,114,133,0.14)}
-
-    .resume-wrap{display:grid;grid-template-columns:1fr 320px;gap:22px}
-
-    /* Left — main content */
-    .panel{background:linear-gradient(180deg,var(--card),#fbfdff);padding:24px;border-radius:12px;box-shadow:0 10px 30px rgba(11,17,26,0.06)}
-    header{display:flex;gap:18px;align-items:center}
-    .avatar{width:86px;height:86px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:28px}
-    h1{margin:0;font-size:20px}
-    .role{color:var(--muted);margin-top:4px;font-weight:600}
-
-    .meta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}
-    .pill{background:#eef7f8;color:var(--accent);padding:6px 10px;border-radius:999px;font-size:13px}
-
-    .section{margin-top:18px}
-    .section h3{margin:0 0 12px 0;font-size:13px;color:#0b1220}
-    .summary{font-size:14px;color:#0f172a;line-height:1.5}
-
-    .experience .job{padding:14px;border-radius:10px;background:#ffffff;border:1px solid rgba(11,17,26,0.04);margin-bottom:12px}
-    .job h4{margin:0;font-size:15px}
-    .meta{font-size:13px;color:var(--muted);margin-top:6px}
-    .bullets{margin:10px 0 0 18px}
-    .tech{margin-top:8px;font-size:13px;color:var(--muted)}
-
-    /* Right — side bar */
-    .aside{position:relative;padding:22px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfdff);box-shadow:0 8px 22px rgba(11,17,26,0.04)}
-    .aside h4{margin:0 0 8px 0;font-size:13px}
-    .contact a{color:var(--accent);text-decoration:none}
-    .small{font-size:13px;color:var(--muted)}
-
-    /* Contact UI */
-  .contact-icons{display:flex;gap:14px;margin:12px 0;align-items:center}
-  .icon-link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:#eef7f8;color:var(--accent);text-decoration:none;transition:all 0.14s ease;cursor:pointer;line-height:0}
-  .icon-link:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
-  .icon-link svg{width:20px;height:20px;display:block;margin:auto}
-  /* WhatsApp icon: use the same .icon-link styles as the other icons so it behaves consistently */
-  /* No special per-icon overrides here. The phone icon will inherit .icon-link and .icon-link svg sizing. */
-    .print-only{display:none}    .skill-list{display:flex;flex-wrap:wrap;gap:8px}
-    .skill-chip{background:#f0f7f7;padding:6px 10px;border-radius:8px;font-weight:600;color:#0b1220;font-size:13px}
-
-    /* Timeline look */
-    .timeline{border-left:2px solid rgba(11,17,26,0.04);padding-left:16px}
-
-    @media (max-width:920px){
-      .resume-wrap{grid-template-columns:1fr}
+    :root {
+      --bg: #0b1020;
+      --card: #141c2e;
+      --card-2: #182338;
+      --line: rgba(186, 206, 230, 0.14);
+      --line-strong: rgba(186, 206, 230, 0.28);
+      --text: #edf3fb;
+      --muted: #c5d2e2;
+      --soft: #d7e2f0;
+      --accent: #6ee7d2;
+      --accent-2: #8eb0ff;
+      --ink: #06221e;
+      --max: 1100px;
+      --font: "Manrope", "Segoe UI", sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+      --radius: 18px;
     }
 
-    @media print{
-      @page {
-        size: letter;
-        margin: 0.4in;
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 84px; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse 70% 42% at 8% -8%, rgba(142, 176, 255, 0.16), transparent 52%),
+        radial-gradient(ellipse 42% 32% at 96% 0%, rgba(110, 231, 210, 0.1), transparent 46%),
+        var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { max-width: 100%; }
+    a { color: inherit; }
+    h1, h2, h3, p { margin: 0; }
+    ul { margin: 0; padding: 0; list-style: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus { outline: none; }
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+    ::selection { background: var(--accent); color: var(--ink); }
+
+    .skip {
+      position: absolute;
+      left: 16px;
+      top: -48px;
+      z-index: 40;
+      background: var(--accent);
+      color: var(--ink);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .skip:focus { top: 12px; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: #0b1020;
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner, .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin-inline: auto;
+    }
+    .topbar-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+    .monogram {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink);
+      background: var(--accent);
+    }
+    nav {
+      display: flex;
+      gap: 4px;
+      margin-left: auto;
+    }
+    nav a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 12px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 999px;
+    }
+    nav a:hover { color: var(--text); background: rgba(255, 255, 255, 0.04); }
+
+    .btn {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn svg { width: 16px; height: 16px; display: block; }
+    .btn:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-primary {
+      background: var(--accent);
+      border-color: transparent;
+      color: var(--ink);
+    }
+    .btn-primary:hover { color: var(--ink); filter: brightness(1.06); }
+    .topbar .print-btn { padding-inline: 14px; }
+
+    main { padding-bottom: 48px; }
+    .hero { padding: 42px 0 12px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.75fr);
+      gap: 28px;
+      align-items: start;
+    }
+    .kicker, .index, .node-top, .company, .when, .chips li, .tech-row li {
+      font-family: var(--mono);
+    }
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(110, 231, 210, 0.12);
+    }
+    h1 {
+      margin-top: 14px;
+      font-size: clamp(2.5rem, 6vw, 4.35rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      font-weight: 800;
+      max-width: 12ch;
+    }
+    .role {
+      margin-top: 16px;
+      color: var(--accent-2);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      font-weight: 700;
+    }
+    .lede {
+      margin-top: 16px;
+      max-width: 62ch;
+      color: var(--soft);
+      font-size: 1.05rem;
+    }
+    .meta-row, .hero-actions, .focus {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .meta-row { margin-top: 18px; }
+    .pill, .focus li, .chips li, .tech-row li {
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .pill {
+      color: var(--muted);
+      font-size: 13px;
+      padding: 6px 10px;
+    }
+    .focus { margin-top: 18px; }
+    .focus li {
+      color: var(--soft);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 7px 12px;
+      background: rgba(110, 231, 210, 0.08);
+      border-color: rgba(110, 231, 210, 0.28);
+    }
+    .hero-actions { margin-top: 22px; }
+    .direct-contact {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+    }
+    .direct-contact a { color: var(--text); text-underline-offset: 3px; }
+    .direct-contact a:hover { color: var(--accent); }
+
+    .node-panel {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at 50% 42%, rgba(110, 231, 210, 0.08), transparent 58%),
+        linear-gradient(180deg, var(--card), #10182a);
+      box-shadow: var(--shadow);
+      padding: 16px 16px 8px;
+      color: var(--accent);
+    }
+    .node-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .topology { width: 100%; height: auto; display: block; }
+    .topology .links { fill: none; stroke: currentColor; stroke-width: 1.15; opacity: 0.75; }
+    .topology .node circle { fill: #10182a; stroke: currentColor; stroke-width: 1.3; }
+    .topology .node.core circle { stroke-width: 1.7; }
+    .topology text {
+      fill: var(--soft);
+      font-family: var(--mono);
+      font-size: 11px;
+      text-anchor: middle;
+    }
+
+    .summary-card, .job-card, .skill-card, .info-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 80px), var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .summary-card { margin-top: 22px; padding: 22px 24px 24px; }
+    .section { padding: 34px 0; }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .index {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+    }
+    h2 {
+      font-size: clamp(1.45rem, 2vw, 1.8rem);
+      letter-spacing: -0.03em;
+    }
+    .summary-card h2 { font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    #summary {
+      margin-top: 10px;
+      max-width: 85ch;
+      color: var(--soft);
+    }
+
+    .timeline { display: grid; gap: 14px; }
+    .job {
+      display: grid;
+      grid-template-columns: 56px minmax(0, 1fr);
+      gap: 12px;
+    }
+    .job-rail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100%;
+    }
+    .job-index {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      border: 1px solid rgba(110, 231, 210, 0.35);
+      border-radius: 999px;
+      padding: 4px 7px;
+      background: #10182a;
+    }
+    .job-rail::after {
+      content: "";
+      width: 1px;
+      flex: 1;
+      margin-top: 8px;
+      background: var(--line-strong);
+    }
+    .job:last-child .job-rail::after { display: none; }
+    .job-card { padding: 18px 20px 16px; }
+    .job-current .job-card {
+      border-color: rgba(110, 231, 210, 0.42);
+      background:
+        linear-gradient(180deg, rgba(110, 231, 210, 0.07), transparent 120px),
+        var(--card);
+    }
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .company {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .job-card h3 {
+      margin-top: 4px;
+      font-size: 1.18rem;
+      letter-spacing: -0.03em;
+      line-height: 1.25;
+    }
+    .when {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .badge {
+      color: var(--ink);
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 3px 8px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .bullets {
+      margin-top: 14px;
+      display: grid;
+      gap: 8px;
+    }
+    .bullets li {
+      position: relative;
+      padding-left: 16px;
+      color: var(--soft);
+    }
+    .bullets li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      position: absolute;
+      left: 0;
+      top: 0.58em;
+    }
+    .tech-row, .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tech-row { margin-top: 14px; }
+    .tech-row li, .chips li {
+      color: var(--soft);
+      font-size: 12px;
+      line-height: 1.35;
+      padding: 5px 8px;
+    }
+    .job-card, .skill-card, .info-card {
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .job-card:hover, .skill-card:hover, .info-card:hover {
+      border-color: rgba(110, 231, 210, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .skill-grid, .info-grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .skill-card, .info-card { padding: 18px; min-width: 0; }
+    .skill-card { grid-column: span 6; }
+    .skill-card:nth-child(odd) { grid-column: span 7; }
+    .skill-card:nth-child(even) { grid-column: span 5; }
+    .skill-card:nth-child(7),
+    .skill-card:nth-child(8) { grid-column: span 6; }
+    .skill-card h3, .info-card h3 {
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .skill-card .hint {
+      margin-top: 4px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .chips { margin-top: 14px; }
+    .info-card { grid-column: span 4; }
+    .info-card p { margin-top: 8px; color: var(--soft); }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      padding: 22px 0 32px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .print-only, .print-sheet { display: none; }
+
+    .will-reveal { opacity: 0; transform: translateY(12px); }
+    .will-reveal.is-in {
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+      .status-dot { animation: pulse 2.8s ease-in-out infinite; }
+      .topology .links path {
+        stroke-dasharray: 4 8;
+        animation: flow 24s linear infinite;
       }
-      body{
-        background:white;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        color-adjust: exact !important;
+    }
+    @keyframes pulse {
+      50% { box-shadow: 0 0 0 6px rgba(110, 231, 210, 0.04); }
+    }
+    @keyframes flow { to { stroke-dashoffset: -280; } }
+
+    @media (max-width: 900px) {
+      .hero-grid, .skill-grid, .info-grid { grid-template-columns: 1fr; }
+      .skill-card, .skill-card:nth-child(n), .info-card { grid-column: auto; }
+      h1 { max-width: none; }
+    }
+    @media (max-width: 720px) {
+      .topbar-inner { flex-wrap: wrap; padding: 10px 0; }
+      nav { order: 3; width: 100%; margin-left: 0; justify-content: space-between; }
+      nav a { padding-inline: 6px; font-size: 13px; }
+      .topbar .print-btn { margin-left: auto; }
+      .job { grid-template-columns: 1fr; gap: 8px; }
+      .job-rail { flex-direction: row; }
+      .job-rail::after { display: none; }
+      .job-head { flex-direction: column; gap: 8px; }
+      .when { align-items: flex-start; text-align: left; flex-direction: row; flex-wrap: wrap; }
+      .when .place::before { content: "·"; margin-right: 8px; }
+      .hero-actions .btn { flex: 1 1 140px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
       }
-      .controls{display:none}
-      .container{margin:0;padding:0;max-width:100%}
-      .resume-wrap{
-        grid-template-columns:1fr 280px;
-        gap:16px;
+      .job-card:hover, .skill-card:hover, .info-card:hover { transform: none; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 0; }
+      html, body {
+        background: #fff !important;
+        color: #1c2328;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 210mm !important;
+        min-width: 0 !important;
       }
-      .panel{
-        background:linear-gradient(180deg,var(--card),#fbfdff) !important;
-        box-shadow:none;
-        border-radius:10px;
-        padding:18px;
-        border:1px solid rgba(11,17,26,0.08);
+      .skip, .topbar, main, .site-footer { display: none !important; }
+      .print-sheet {
+        display: block !important;
+        box-sizing: border-box;
+        width: 210mm;
+        margin: 0;
+        padding: 11mm 14mm 12mm;
+        background: #fff;
+        color: #1c2328;
+        font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+        font-size: 10.5pt;
+        line-height: 1.35;
+        hyphens: none;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
-      .aside{
-        background:linear-gradient(180deg,#fff,#fbfdff) !important;
-        box-shadow:none;
-        border-radius:10px;
-        padding:16px;
-        border:1px solid rgba(11,17,26,0.08);
+      .print-sheet * { max-width: none; animation: none !important; }
+      .print-header {
+        margin: 0;
+        padding: 0 0 7pt;
+        border-bottom: 1.75pt solid #0c6670;
       }
-      .avatar{
-        display:none !important;
+      .print-sheet h1 {
+        margin: 0;
+        color: #161b20;
+        font-size: 20pt;
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+        font-weight: 800;
       }
-      header{gap:14px}
-      h1{font-size:18px}
-      .role{font-size:14px}
-      .pill{
-        background:#eef7f8 !important;
-        color:var(--accent) !important;
-        padding:4px 8px;
-        font-size:12px;
+      .print-roleline {
+        margin: 2pt 0 0;
+        color: #0c6670;
+        font-size: 11.5pt;
+        font-weight: 700;
+        line-height: 1.2;
       }
-      .meta-row{gap:10px;margin-top:8px}
-      .section{margin-top:14px}
-      .section h3{font-size:12px;margin-bottom:8px}
-      .summary{font-size:12px;line-height:1.45}
-      .experience .job{
-        padding:10px 12px;
-        border-radius:8px;
-        background:#ffffff !important;
-        border:1px solid rgba(11,17,26,0.06);
-        margin-bottom:8px;
-        page-break-inside:avoid;
+      .print-where-line,
+      .print-links {
+        margin: 2pt 0 0;
+        color: #3a444c;
+        font-size: 10pt;
+        line-height: 1.3;
       }
-      .job h4{font-size:13px}
-      .meta{font-size:11px;margin-top:4px}
-      .bullets{margin:6px 0 0 16px;font-size:11px;line-height:1.4}
-      .bullets li{margin-bottom:2px}
-      .tech{font-size:11px;margin-top:6px}
-      .aside h4{font-size:11px;margin-bottom:6px}
-      .small{font-size:11px;line-height:1.4}
-      .skill-chip{
-        background:#f0f7f7 !important;
-        color:#0b1220 !important;
-        padding:4px 8px;
-        font-size:11px;
-        border-radius:6px;
+      .print-sheet a { color: #0c6670; text-decoration: none; }
+      .print-sheet h2 {
+        margin: 9pt 0 4pt;
+        padding: 0 0 2pt;
+        border-bottom: 0.8pt solid #0c6670;
+        color: #0c6670;
+        font-size: 10pt;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        line-height: 1.2;
+        break-after: avoid;
+        page-break-after: avoid;
       }
-      .skill-list{gap:5px}
-      .timeline{border-left:2px solid rgba(11,17,26,0.08);padding-left:12px}
-      /* Print: hide icons and show text-only contact info */
-      .icon{display:none}
-      .screen-only{display:none}
-      .print-only{display:block}
-      .contact-icons{display:none !important}
+      .print-sheet h3 {
+        margin: 0;
+        color: #161b20;
+        font-size: 11pt;
+        font-weight: 800;
+        line-height: 1.25;
+        letter-spacing: -0.01em;
+        text-transform: none;
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+      .print-sheet p { margin: 0; orphans: 2; widows: 2; }
+      .print-summary p { font-size: 10.5pt; line-height: 1.38; color: #22282e; }
+      .print-skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 18pt;
+        row-gap: 5pt;
+      }
+      .print-skill { break-inside: avoid; page-break-inside: avoid; }
+      .print-skill h3 {
+        font-size: 10pt;
+        font-weight: 800;
+        letter-spacing: 0;
+        margin: 0 0 1pt;
+      }
+      .print-skill p { font-size: 10pt; line-height: 1.32; color: #2c343c; }
+      .print-role {
+        margin: 0;
+        padding: 7pt 0 1pt;
+        border-top: 0.6pt solid #d5dbe1;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .print-experience .print-role:first-of-type {
+        border-top: none;
+        padding-top: 2pt;
+      }
+      .print-role-flow { break-inside: auto; page-break-inside: auto; }
+      .print-role-head {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .print-meta-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12pt;
+        margin-top: 1pt;
+      }
+      .print-company {
+        margin: 0;
+        color: #0c6670;
+        font-size: 10.5pt;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+      .print-dates {
+        flex: 0 0 auto;
+        margin: 0;
+        color: #3a444c;
+        font-size: 10pt;
+        font-weight: 600;
+        line-height: 1.2;
+        text-align: right;
+        white-space: nowrap;
+      }
+      .print-sheet ul {
+        margin: 3pt 0 0;
+        padding: 0 0 0 13pt;
+        list-style: disc;
+      }
+      .print-sheet li {
+        display: list-item;
+        margin: 0 0 1.5pt;
+        padding: 0;
+        color: #22282e;
+        font-size: 10.5pt;
+        line-height: 1.34;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .print-sheet li::marker { color: #0c6670; }
+      .print-sheet li::before { content: none; }
+      .print-tech {
+        margin: 3pt 0 1pt;
+        color: #3a444c;
+        font-size: 9.5pt;
+        line-height: 1.35;
+      }
+      .print-tech strong {
+        color: #0c6670;
+        font-weight: 800;
+        letter-spacing: 0.01em;
+      }
+      .print-close-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 18pt;
+      }
+      .print-close-row h2 { margin-top: 8pt; }
+      .print-closing p { margin-top: 1pt; font-size: 10.5pt; line-height: 1.35; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="controls">
-      <button class="btn" id="printBtn" title="Save / Print">
-        <!-- Download icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">
+        <span class="monogram" id="monogram">VS</span>
+        <span>Victor Arias</span>
+      </a>
+      <nav aria-label="Sections">
+        <a href="#summary-block">Summary</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#background">Background</a>
+      </nav>
+      <button class="btn print-btn" id="printBtn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+        Download
       </button>
     </div>
+  </header>
 
-    <div class="resume-wrap">
-      <main class="panel" aria-labelledby="name">
-        <header>
-          <div class="avatar" id="avatar">VA</div>
-          <div>
-            <h1 id="fullName">Victor S. Arias González</h1>
-            <div class="role" id="role">Senior Java Software Engineer</div>
-            <div class="meta-row" id="metaRow">
-              <div class="pill" id="location">San José, Costa Rica</div>
-              <div class="pill" id="availability">Open to remote roles</div>
-            </div>
+  <main id="main" tabindex="-1">
+    <section class="hero" id="top" aria-labelledby="fullName">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker"><span class="status-dot" aria-hidden="true"></span> <span id="availability">Remote roles only</span></p>
+          <h1 id="fullName">Victor S. Arias González</h1>
+          <p class="role" id="role">Senior Java Software Engineer</p>
+          <p class="lede">Senior Software Engineer with 14+ years in Java development and distributed systems — microservices, REST APIs, and AI agent integrations.</p>
+          <ul class="focus" aria-label="Focus areas">
+            <li>Software Engineering</li>
+            <li>Backend Development</li>
+            <li>System Integrations</li>
+            <li>AI Engineering</li>
+          </ul>
+          <div class="meta-row">
+            <span class="pill" id="location">Heredia, Costa Rica</span>
           </div>
-        </header>
-
-        <section class="section" id="summarySection">
-          <h3>Summary</h3>
-          <div class="summary" id="summary" style="text-align: justify;">Experienced backend engineer specializing in Java and cloud-native systems. I design resilient microservices, lead refactors to improve scalability, and introduce engineering practices that reduce incidents and accelerate delivery.</div>
-        </section>
-
-        <section class="section" id="experienceSection">
-          <h3>Experience</h3>
-          <div class="experience timeline" id="experienceList"></div>
-        </section>
-
-        <!-- education moved to aside for compact layout -->
-      </main>
-
-      <aside class="aside" aria-labelledby="contactHeading">
-        <div class="contact" id="contact">
-          <h4 id="contactHeading">Contact</h4>
-          <!-- Screen with icons only -->
-          <div class="contact-icons screen-only">
-            <!-- Gmail -->
-            <a id="emailIcon" href="mailto:vicar176@gmail.com" title="Send email" class="icon-link" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
-              </svg>
-            </a>
-            <!-- WhatsApp -->
-            <a id="phoneIcon" href="#" title="WhatsApp" class="icon-link" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-              </svg>
-            </a>
-            <!-- LinkedIn -->
-            <a id="linkedinIcon" href="#" title="LinkedIn profile" class="icon-link" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.731-2.004 1.438-.103.25-.129.599-.129.948v5.419h-3.554s.05-8.736 0-9.646h3.554v1.364c.43-.664 1.199-1.608 2.928-1.608 2.136 0 3.745 1.398 3.745 4.406v5.484zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.704 0-.948.77-1.704 1.959-1.704 1.188 0 1.914.756 1.942 1.704 0 .946-.753 1.704-1.986 1.704zm1.581 11.019H3.656V9.806h3.262v10.646zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </a>
+          <div class="hero-actions">
+            <button class="btn btn-primary print-btn" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+              Download resume
+            </button>
+            <a class="btn" id="linkedinIcon" href="https://www.linkedin.com/in/victor-arias-sr-java/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn" id="emailIcon" href="mailto:vicar176@gmail.com">Email</a>
+            <a class="btn" id="phoneIcon" href="https://wa.me/50685174202" target="_blank" rel="noopener noreferrer" title="WhatsApp">WhatsApp</a>
           </div>
+          <p class="direct-contact">
+            <a id="emailLine" href="mailto:vicar176@gmail.com">vicar176@gmail.com</a>
+            <a id="phoneLine" href="https://wa.me/50685174202" target="_blank" rel="noopener noreferrer">+506 8517 4202</a>
+          </p>
+          <p class="print-only" id="contactPrint">
+            Email: <span id="emailPrint">vicar176@gmail.com</span><br />
+            Phone: <span id="phonePrint">+506 8517 4202</span><br />
+            LinkedIn: <span id="linkedinPrint">www.linkedin.com/in/victor-arias-sr-java/</span>
+          </p>
+        </div>
 
-          <!-- Print-only plain text -->
-          <div class="print-only small" id="contactPrint">
-            Email: <span id="emailPrint">vicar176@gmail.com</span>
-            <br>Phone: <span id="phonePrint">+506 8517 4202</span>
-            <br>LinkedIn: <span id="linkedinPrint">linkedin.com/in/victor-arias-sr-java/</span>
+        <aside class="node-panel" aria-hidden="true">
+          <div class="node-top">
+            <span>topology</span>
+            <span>services · messaging · agents</span>
           </div>
-        </div>
-        <div style="height:10px"></div>
-        <div style="border-top:1px solid rgba(11,17,26,0.06);margin-top:8px;padding-top:12px">
-          <h4>TECHNICAL SKILLS</h4>
-          <div class="skill-list" id="skillsList"></div>
-        </div>
-        <div style="height:10px"></div>
-        <div style="border-top:1px solid rgba(11,17,26,0.06);margin-top:8px;padding-top:12px">
-          <h4>Education</h4>
-          <div class="small" id="education">National University of Costa Rica — BS. in Computer System Engineer</div>
-        </div>
+          <svg class="topology" viewBox="0 0 360 300">
+            <g class="links">
+              <path d="M78 72 C 120 90, 140 120, 180 146" />
+              <path d="M286 58 C 250 90, 220 116, 196 140" />
+              <path d="M70 214 C 110 200, 140 176, 168 160" />
+              <path d="M292 176 C 250 170, 226 162, 206 154" />
+              <path d="M180 168 C 180 196, 178 214, 176 236" />
+              <path d="M86 220 C 120 236, 146 246, 164 252" />
+              <path d="M276 190 C 240 214, 210 236, 190 250" />
+            </g>
+            <g class="node" transform="translate(72 64)"><circle r="22" /><text y="4">API</text></g>
+            <g class="node" transform="translate(292 50)"><circle r="22" /><text y="4">Svc</text></g>
+            <g class="node core" transform="translate(180 150)"><circle r="30" /><text y="4">Core</text></g>
+            <g class="node" transform="translate(64 214)"><circle r="22" /><text y="4">MQ</text></g>
+            <g class="node" transform="translate(298 176)"><circle r="22" /><text y="4">MCP</text></g>
+            <g class="node" transform="translate(176 256)"><circle r="22" /><text y="4">Agent</text></g>
+          </svg>
+        </aside>
+      </div>
 
-        <div style="margin-top:16px">
-          <h4>Certifications</h4>
-          <div class="small" id="certifications">Oracle Certified Associate (OCA)</div>
-        </div>
+      <div class="wrap" id="summary-block">
+        <article class="summary-card">
+          <h2>Summary</h2>
+          <p id="summary"></p>
+        </article>
+      </div>
+    </section>
 
-        <div style="margin-top:16px">
-          <h4>Languages</h4>
-          <div class="small" id="languages">Spanish (native), English (professional)</div>
+    <section class="section" id="experience" aria-labelledby="experience-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="index">01</span>
+          <h2 id="experience-heading">Experience</h2>
         </div>
-      </aside>
+        <div class="timeline" id="experienceList"></div>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="index">02</span>
+          <h2 id="skills-heading">Technical Skills</h2>
+        </div>
+        <div class="skill-grid" id="skillsList"></div>
+      </div>
+    </section>
+
+    <section class="section" id="background" aria-labelledby="background-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="index">03</span>
+          <h2 id="background-heading">Background</h2>
+        </div>
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Education</h3>
+            <p id="education"></p>
+          </article>
+          <article class="info-card">
+            <h3>Certifications</h3>
+            <p id="certifications"></p>
+          </article>
+          <article class="info-card">
+            <h3>Languages</h3>
+            <p id="languages"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p id="footerLine"></p>
+      <p>Senior Java Software Engineer</p>
     </div>
-  </div>
+  </footer>
 
+  <article class="print-sheet" id="printSheet" aria-hidden="true"></article>
+
+  <script type="application/ld+json" id="personLd"></script>
   <script>
     // Resume data (edit this object to customize)
     const resume = {
@@ -244,27 +832,34 @@
       linkedin: 'https://www.linkedin.com/in/victor-arias-sr-java/',
       location: 'Heredia, Costa Rica',
       availability: 'Remote roles only',
-      summary: 'Highly proficient Senior Software Engineer with 13+ years of experience specializing in Java development (Java 7-17) and complex, distributed systems. Expert in designing and implementing Microservices architectures, developing robust RESTful APIs, and deploying solutions across diverse technology stacks, including Spring Boot, AWS, Docker, and Kubernetes. Proven ability to quickly master new technologies, collaborate effectively in Agile environments, and drive projects from design to high-quality production deployment. Adept at problem-solving, optimizing performance, and ensuring scalability in fast-paced settings. Committed to continuous learning and applying best practices to deliver innovative software solutions that meet evolving business needs.',
+      summary: 'Senior Software Engineer with 14+ years of experience designing and developing enterprise applications, distributed systems, and microservices-based architectures. Strong expertise in Java, Spring Boot, RESTful APIs, cloud technologies, and asynchronous messaging systems. Recent experience includes developing customer-facing Model Context Protocol (MCP) integrations, custom AI agent tools, and reusable agent skills, alongside applying AI-assisted engineering practices throughout the software development lifecycle. Focused on building reliable, maintainable, and scalable software solutions.',
       technicalSkills: [
-        { title: 'Languages & Frameworks', items: ['Java (Core, 7, 8, 17)', 'Spring (Boot, MVC, Data, Security)', 'Hibernate', 'ReactJS', 'Python', 'Typescript', 'NextJS', 'Javascript'] },
+        { title: 'Backend Engineering', items: ['Java (Core, 7, 8, 17)', 'Spring (Boot, MVC, Data, Security)', 'Hibernate', 'Python', 'JDBC', 'JPA', 'JUnit', 'Mockito'] },
         { title: 'Databases', items: ['MySQL', 'PostgreSQL', 'MSSQL', 'Sybase', 'MongoDB', 'Couchbase'] },
+        { title: 'Software Architecture & Integrations', items: ['Microservices', 'REST Services', 'JWT', 'Oauth', 'Keycloak', 'Maven', 'Git', 'SVN'] },
         { title: 'Cloud & DevOps', items: ['AWS (S3, EC2, SQS, CloudFront)', 'Docker', 'Kubernetes', 'Jenkins', 'TeamCity'] },
-        { title: 'Architecture & Tools', items: ['Microservices', 'REST Services', 'JDBC', 'JPA', 'Maven', 'Git', 'SVN', 'JWT', 'Oauth', 'Keycloak'] },
-        { title: 'Testing', items: ['JUnit', 'Mockito', 'Karma', 'Enzyme'] }
+        { title: 'AI Engineering & Agentic Development', items: ['AI Agent Skills', 'Agentic AI Workflows', 'AI-Assisted Software Development', 'AI-Assisted Code Review', 'OpenAI Codex', 'GitHub Copilot', 'Claude Code'] },
+        { title: 'MCP & AI Agent Integrations', items: ['Model Context Protocol (MCP)', 'MCP Server Integrations', 'MCP Tool Development'] },
+        { title: 'Messaging & Asynchronous Systems', items: ['RabbitMQ', 'Asynchronous Messaging', 'Message Producers / Consumers', 'Dead-Letter Queues (DLQ)', 'Message Routing'] },
+        { title: 'Frontend & Other Technologies', items: ['ReactJS', 'Typescript', 'NextJS', 'Javascript', 'Karma', 'Enzyme'] }
       ],
       experience: [
         {
-          company: 'QAT Global',
-          title: 'Senior Java Software Engineer',
+          company: 'Contractor',
+          title: 'Senior Java Software Consultant',
           period: 'OCT 2024 – Present',
           location: 'Costa Rica',
           bullets: [
-            'Supported and maintained an existing application while simultaneously developing new REST APIs using Java 17 and Spring.',
-            'Contributed to frontend development by refactoring ReactJS class components into functional components and implementing unit tests using Karma and Enzyme.',
-            'Developed and optimized stored procedures for both MySQL and MSSQL databases.',
-            'Utilized AGILE methodologies, Docker, Kubernetes, and TeamCity for CI/CD.'
+            'Maintained an existing application and developed new REST APIs with Java 17 and Spring.',
+            'Refactored React class components into functional components and implemented unit tests with Karma and Enzyme.',
+            'Developed and optimized stored procedures for MySQL and MSSQL.',
+            'Applied Agile delivery practices and used Docker, Kubernetes, and TeamCity for CI/CD.',
+            'Designed and developed custom Model Context Protocol (MCP) tools and customer-facing integrations that let AI agents interact with application capabilities, APIs, and external services.',
+            'Applied AI-assisted and agentic software engineering with OpenAI Codex, GitHub Copilot, and Claude Code across implementation, analysis, refactoring, and code review, validating AI-generated and AI-modified code with engineering judgment.',
+            'Developed reusable AI Agent Skills to extend agent capabilities, define repeatable workflows, and standardize engineering task automation.',
+            'Configured RabbitMQ producers, consumers, message routing, dead-letter queues (DLQs), and poison-message handling for asynchronous processing.'
           ],
-          tech: ['Java 17', 'Spring', 'React', 'Karma', 'Enzyme', 'MySQL', 'MSSQL', 'Docker', 'Kubernetes', 'TeamCity']
+          tech: ['Java 17', 'Spring', 'React', 'Karma', 'Enzyme', 'MySQL', 'MSSQL', 'Docker', 'Kubernetes', 'TeamCity', 'MCP', 'RabbitMQ', 'OpenAI Codex', 'GitHub Copilot', 'Claude Code']
         },
         {
           company: 'Freelance',
@@ -339,72 +934,332 @@
       languages: ['Spanish (native)', 'English (professional)']
     };
 
-    // Rendering
-    function renderResume(data){
+    function renderResume(data) {
       document.getElementById('fullName').textContent = data.name;
       document.getElementById('role').textContent = data.role;
-      document.getElementById('avatar').textContent = initials(data.name);
+      document.getElementById('monogram').textContent = initials(data.name);
       document.getElementById('summary').textContent = data.summary;
-      
-      // screen icons - populate links
-      const emailIcon = document.getElementById('emailIcon');
-      if(emailIcon) emailIcon.href = 'mailto:' + data.email;
-      const phoneIcon = document.getElementById('phoneIcon');
-      if(phoneIcon) phoneIcon.href = 'https://wa.me/' + data.phone.replace(/\D/g,'');
-      const linkedinIcon = document.getElementById('linkedinIcon');
-      if(linkedinIcon) linkedinIcon.href = data.linkedin;
-      
-      // print-only spans
-      const emailPrint = document.getElementById('emailPrint'); if(emailPrint) emailPrint.textContent = data.email;
-      const phonePrint = document.getElementById('phonePrint'); if(phonePrint) phonePrint.textContent = data.phone;
-      const linkedinPrint = document.getElementById('linkedinPrint'); if(linkedinPrint) linkedinPrint.textContent = data.linkedin.replace(/^https?:\/\//,'');
-      
       document.getElementById('location').textContent = data.location;
       document.getElementById('availability').textContent = data.availability;
+      document.getElementById('footerLine').textContent = data.name + ' · ' + data.location;
 
-      // Skills (categorized)
-      const skillsRoot = document.getElementById('skillsList'); skillsRoot.innerHTML = '';
-      if (Array.isArray(data.technicalSkills)) {
-        data.technicalSkills.forEach(cat => {
-          const catTitle = document.createElement('div');
-          catTitle.style.marginTop = '8px';
-          catTitle.style.fontSize = '13px';
-          catTitle.style.fontWeight = '700';
-          catTitle.textContent = cat.title;
-          skillsRoot.appendChild(catTitle);
+      const emailIcon = document.getElementById('emailIcon');
+      emailIcon.href = 'mailto:' + data.email;
+      emailIcon.textContent = 'Email';
+      emailIcon.setAttribute('aria-label', 'Email ' + data.email);
 
-          const wrap = document.createElement('div');
-          wrap.className = 'skill-list';
-          (cat.items || []).forEach(s => {
-            const el = document.createElement('div'); el.className='skill-chip'; el.textContent=s; wrap.appendChild(el);
-          });
-          skillsRoot.appendChild(wrap);
-        });
-      } else if (Array.isArray(data.skills)) {
-        // fallback for older data shape
-        data.skills.slice(0,12).forEach(s => { const el = document.createElement('div'); el.className='skill-chip'; el.textContent=s; skillsRoot.appendChild(el);} );
-      }
+      const phoneIcon = document.getElementById('phoneIcon');
+      const whatsapp = 'https://wa.me/' + data.phone.replace(/\D/g, '');
+      phoneIcon.href = whatsapp;
+      phoneIcon.textContent = 'WhatsApp';
+      phoneIcon.setAttribute('aria-label', 'WhatsApp ' + data.phone);
 
-      // Experience
-      const expRoot = document.getElementById('experienceList'); expRoot.innerHTML = '';
-      data.experience.forEach(job => {
-        const jobEl = document.createElement('div'); jobEl.className='job';
-        jobEl.innerHTML = `<h4>${escapeHtml(job.title)} — ${escapeHtml(job.company)}</h4>`;
-        const meta = document.createElement('div'); meta.className='meta'; meta.textContent = `${job.period} • ${job.location}`; jobEl.appendChild(meta);
-        const ul = document.createElement('ul'); ul.className='bullets'; job.bullets.forEach(b=>{ const li=document.createElement('li'); li.textContent=b; ul.appendChild(li); }); jobEl.appendChild(ul);
-        const tech = document.createElement('div'); tech.className='tech'; tech.textContent = 'Tech: ' + job.tech.join(', '); jobEl.appendChild(tech);
-        expRoot.appendChild(jobEl);
-      });
+      const linkedinIcon = document.getElementById('linkedinIcon');
+      linkedinIcon.href = data.linkedin;
+      linkedinIcon.setAttribute('aria-label', 'LinkedIn profile');
 
-      document.getElementById('education').textContent = `${data.education.school} — ${data.education.degree}`;
+      const emailLine = document.getElementById('emailLine');
+      emailLine.href = 'mailto:' + data.email;
+      emailLine.textContent = data.email;
+      const phoneLine = document.getElementById('phoneLine');
+      phoneLine.href = whatsapp;
+      phoneLine.textContent = data.phone;
+      phoneLine.setAttribute('aria-label', 'WhatsApp ' + data.phone);
+
+      document.getElementById('emailPrint').textContent = data.email;
+      document.getElementById('phonePrint').textContent = data.phone;
+      document.getElementById('linkedinPrint').textContent = data.linkedin.replace(/^https?:\/\//, '');
+
+      renderSkills(data);
+      renderExperience(data.experience);
+
+      document.getElementById('education').textContent = data.education.school + ' — ' + data.education.degree;
       document.getElementById('certifications').textContent = data.certifications.join(', ');
       document.getElementById('languages').textContent = data.languages.join(', ');
+
+      const ld = document.getElementById('personLd');
+      ld.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: data.name,
+        jobTitle: data.role,
+        email: 'mailto:' + data.email,
+        telephone: data.phone,
+        url: 'https://vicar176.github.io/',
+        sameAs: [data.linkedin],
+        homeLocation: data.location,
+        worksFor: data.experience[0] ? data.experience[0].company : undefined,
+        knowsLanguage: data.languages,
+        alumniOf: data.education.school,
+        hasCredential: data.certifications
+      });
+
+      renderPrintSheet(data);
+      watchReveal();
     }
 
-    function initials(name){ return name.split(' ').map(n=>n[0]).slice(0,2).join('').toUpperCase(); }
-    function escapeHtml(s){ return String(s).replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[c])); }
+    function renderPrintSheet(data) {
+      const root = document.getElementById('printSheet');
+      root.replaceChildren();
 
-    document.getElementById('printBtn').addEventListener('click', ()=>window.print());
+      const header = document.createElement('header');
+      header.className = 'print-header';
+      const name = document.createElement('h1');
+      name.textContent = data.name;
+      const role = document.createElement('p');
+      role.className = 'print-roleline';
+      role.textContent = data.role;
+      const where = document.createElement('p');
+      where.className = 'print-where-line';
+      where.textContent = data.location + ' · ' + data.availability;
+      const links = document.createElement('p');
+      links.className = 'print-links';
+      const phoneHref = 'tel:' + data.phone.replace(/[^\d+]/g, '');
+      links.append(
+        printLink('mailto:' + data.email, data.email),
+        printSep(),
+        printLink(phoneHref, data.phone),
+        printSep(),
+        printLink(data.linkedin, data.linkedin.replace(/^https?:\/\//, ''))
+      );
+      header.append(name, role, where, links);
+
+      const summary = printSection('Professional Summary');
+      summary.classList.add('print-summary', 'print-closing');
+      const summaryText = document.createElement('p');
+      summaryText.textContent = data.summary;
+      summary.appendChild(summaryText);
+
+      const skills = printSection('Technical Skills');
+      const skillGrid = document.createElement('div');
+      skillGrid.className = 'print-skills';
+      (data.technicalSkills || []).forEach(cat => {
+        const group = document.createElement('div');
+        group.className = 'print-skill';
+        const title = document.createElement('h3');
+        title.textContent = cat.title;
+        const items = document.createElement('p');
+        items.textContent = (cat.items || []).join(', ');
+        group.append(title, items);
+        skillGrid.appendChild(group);
+      });
+      skills.appendChild(skillGrid);
+
+      const experience = printSection('Professional Experience');
+      experience.classList.add('print-experience');
+      (data.experience || []).forEach(job => {
+        const article = document.createElement('article');
+        const longRole = (job.bullets || []).length >= 6;
+        article.className = longRole ? 'print-role print-role-flow' : 'print-role';
+        const head = document.createElement('div');
+        head.className = 'print-role-head';
+        const title = document.createElement('h3');
+        title.textContent = job.title;
+        const meta = document.createElement('div');
+        meta.className = 'print-meta-row';
+        const company = document.createElement('p');
+        company.className = 'print-company';
+        company.textContent = [job.company, job.location].filter(Boolean).join(' · ');
+        const dates = document.createElement('p');
+        dates.className = 'print-dates';
+        dates.textContent = job.period || '';
+        meta.append(company, dates);
+        head.append(title, meta);
+        const list = document.createElement('ul');
+        (job.bullets || []).forEach(text => {
+          const item = document.createElement('li');
+          item.textContent = text;
+          list.appendChild(item);
+        });
+        article.append(head, list);
+        if ((job.tech || []).length) {
+          const tech = document.createElement('p');
+          tech.className = 'print-tech';
+          const label = document.createElement('strong');
+          label.textContent = 'Technologies  ';
+          tech.append(label, document.createTextNode(job.tech.join('  ·  ')));
+          article.appendChild(tech);
+        }
+        experience.appendChild(article);
+      });
+
+      const education = printSection('Education');
+      education.classList.add('print-closing');
+      const educationText = document.createElement('p');
+      educationText.textContent = data.education.school + ' — ' + data.education.degree;
+      education.appendChild(educationText);
+
+      const closeRow = document.createElement('div');
+      closeRow.className = 'print-close-row';
+      const certifications = printSection('Certifications');
+      certifications.classList.add('print-closing');
+      const certificationText = document.createElement('p');
+      certificationText.textContent = (data.certifications || []).join(', ');
+      certifications.appendChild(certificationText);
+      const languages = printSection('Languages');
+      languages.classList.add('print-closing');
+      const languageText = document.createElement('p');
+      languageText.textContent = (data.languages || []).join(', ');
+      languages.appendChild(languageText);
+      closeRow.append(certifications, languages);
+
+      root.append(header, summary, skills, experience, education, closeRow);
+    }
+
+    function printSection(title) {
+      const section = document.createElement('section');
+      section.className = 'print-block';
+      const heading = document.createElement('h2');
+      heading.textContent = title;
+      section.appendChild(heading);
+      return section;
+    }
+
+    function printLink(href, label) {
+      const anchor = document.createElement('a');
+      anchor.href = href;
+      anchor.textContent = label;
+      return anchor;
+    }
+
+    function printSep() {
+      return document.createTextNode(' · ');
+    }
+
+    function renderSkills(data) {
+      const root = document.getElementById('skillsList');
+      root.replaceChildren();
+      if (Array.isArray(data.technicalSkills)) {
+        data.technicalSkills.forEach(cat => {
+          const card = document.createElement('article');
+          card.className = 'skill-card';
+          const title = document.createElement('h3');
+          title.textContent = cat.title;
+          card.appendChild(title);
+          const chips = document.createElement('ul');
+          chips.className = 'chips';
+          (cat.items || []).forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            chips.appendChild(li);
+          });
+          card.appendChild(chips);
+          root.appendChild(card);
+        });
+      } else if (Array.isArray(data.skills)) {
+        data.skills.slice(0, 12).forEach(item => {
+          const card = document.createElement('article');
+          card.className = 'skill-card';
+          card.textContent = item;
+          root.appendChild(card);
+        });
+      }
+    }
+
+    function renderExperience(jobs) {
+      const root = document.getElementById('experienceList');
+      root.replaceChildren();
+      jobs.forEach((job, index) => {
+        const current = /present/i.test(job.period || '');
+        const article = document.createElement('article');
+        article.className = current ? 'job job-current' : 'job';
+
+        const rail = document.createElement('div');
+        rail.className = 'job-rail';
+        rail.appendChild(Object.assign(document.createElement('span'), {
+          className: 'job-index',
+          textContent: String(index + 1).padStart(2, '0')
+        }));
+
+        const card = document.createElement('div');
+        card.className = 'job-card';
+
+        const head = document.createElement('header');
+        head.className = 'job-head';
+        const titles = document.createElement('div');
+        const company = document.createElement('p');
+        company.className = 'company';
+        company.textContent = job.company;
+        const heading = document.createElement('h3');
+        heading.textContent = job.title;
+        titles.append(company, heading);
+
+        const when = document.createElement('div');
+        when.className = 'when';
+        if (current) {
+          const badge = document.createElement('span');
+          badge.className = 'badge';
+          badge.textContent = 'Current';
+          when.appendChild(badge);
+        }
+        const period = document.createElement('span');
+        period.textContent = job.period;
+        const place = document.createElement('span');
+        place.className = 'place';
+        place.textContent = job.location;
+        when.append(period, place);
+        head.append(titles, when);
+
+        const bullets = document.createElement('ul');
+        bullets.className = 'bullets';
+        (job.bullets || []).forEach(text => {
+          const li = document.createElement('li');
+          li.textContent = text;
+          bullets.appendChild(li);
+        });
+
+        const tech = document.createElement('ul');
+        tech.className = 'tech-row';
+        tech.setAttribute('aria-label', 'Technologies');
+        (job.tech || []).forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = item;
+          tech.appendChild(li);
+        });
+
+        card.append(head, bullets, tech);
+        article.append(rail, card);
+        root.appendChild(article);
+      });
+    }
+
+    function watchReveal() {
+      const nodes = document.querySelectorAll('.job, .skill-card, .info-card, .summary-card');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) return;
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        });
+      }, { threshold: 0.08 });
+      nodes.forEach((node, index) => {
+        if (node.getBoundingClientRect().top < window.innerHeight * 0.92) return;
+        node.classList.add('will-reveal');
+        node.style.transitionDelay = (index % 4) * 40 + 'ms';
+        io.observe(node);
+      });
+    }
+
+    function initials(name) {
+      return name.split(' ').filter(Boolean).map(part => part[0]).slice(0, 2).join('').toUpperCase();
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+    }
+
+    document.querySelectorAll('.print-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const link = document.createElement('a');
+        link.href = 'resume.pdf';
+        link.download = 'Victor-S-Arias-Gonzalez-Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+      });
+    });
 
     renderResume(resume);
   </script>
