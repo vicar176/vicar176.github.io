@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Victor S. Arias González — Senior Java Software Engineer</title>
-  <meta name="description" content="Victor S. Arias González is a Senior Java Software Engineer with 13+ years in Java, microservices, REST APIs, and AI agent integrations." />
+  <meta name="description" content="Victor S. Arias González is a Senior Java Software Engineer with 14+ years in Java, Spring, React, microservices, and AI-assisted software engineering." />
   <meta name="author" content="Victor S. Arias González" />
   <meta name="theme-color" content="#0b1020" />
   <meta name="color-scheme" content="dark" />
   <link rel="canonical" href="https://vicar176.github.io/" />
   <meta property="og:title" content="Victor S. Arias González — Senior Java Software Engineer" />
-  <meta property="og:description" content="Senior Java Software Engineer with 13+ years in Java, microservices, REST APIs, and AI agent integrations." />
+  <meta property="og:description" content="Senior Java Software Engineer with 14+ years in Java, Spring, React, microservices, and AI-assisted software engineering." />
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://vicar176.github.io/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -505,22 +505,23 @@
     }
 
     @media print {
-      @page { size: A4; margin: 0; }
+      @page { size: A4; margin: 11mm 14mm 12mm; }
       html, body {
+        color-scheme: light;
         background: #fff !important;
         color: #1c2328;
         margin: 0 !important;
         padding: 0 !important;
-        width: 210mm !important;
+        width: 182mm !important;
         min-width: 0 !important;
       }
       .skip, .topbar, main, .site-footer { display: none !important; }
       .print-sheet {
         display: block !important;
         box-sizing: border-box;
-        width: 210mm;
+        width: 182mm;
         margin: 0;
-        padding: 11mm 14mm 12mm;
+        padding: 0;
         background: #fff;
         color: #1c2328;
         font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
@@ -832,47 +833,59 @@
       linkedin: 'https://www.linkedin.com/in/victor-arias-sr-java/',
       location: 'Heredia, Costa Rica',
       availability: 'Remote roles only',
-      summary: 'Senior Software Engineer with 14+ years of experience designing and developing enterprise applications, distributed systems, and microservices-based architectures. Strong expertise in Java, Spring Boot, RESTful APIs, cloud technologies, and asynchronous messaging systems. Recent experience includes developing customer-facing Model Context Protocol (MCP) integrations, custom AI agent tools, and reusable agent skills, alongside applying AI-assisted engineering practices throughout the software development lifecycle. Focused on building reliable, maintainable, and scalable software solutions.',
+      summary: 'Senior Software Engineer with 14+ years of experience building Java and Spring applications, REST APIs, microservices, and React interfaces. Combines backend engineering, asynchronous messaging, SQL, testing, and technical leadership with AI-assisted development using OpenAI Codex, GitHub Copilot, and Claude Code. Recent work includes internal MCP server and tool development, reusable AI agent skills, and Spec-Driven Development, with attention to security, code quality, and maintainability.',
       technicalSkills: [
-        { title: 'Backend Engineering', items: ['Java (Core, 7, 8, 17)', 'Spring (Boot, MVC, Data, Security)', 'Hibernate', 'Python', 'JDBC', 'JPA', 'JUnit', 'Mockito'] },
-        { title: 'Databases', items: ['MySQL', 'PostgreSQL', 'MSSQL', 'Sybase', 'MongoDB', 'Couchbase'] },
-        { title: 'Software Architecture & Integrations', items: ['Microservices', 'REST Services', 'JWT', 'Oauth', 'Keycloak', 'Maven', 'Git', 'SVN'] },
+        { title: 'Backend Engineering', items: ['Java (Core, 7, 8, 17)', 'Spring (Boot, MVC, Data, Security, Cloud)', 'Hibernate', 'Python', 'JDBC', 'JPA', 'JUnit', 'Mockito'] },
+        { title: 'Databases', items: ['MySQL', 'PostgreSQL', 'MSSQL', 'Sybase', 'MongoDB', 'Couchbase', 'Stored Procedures', 'SQL Data Cleanup'] },
+        { title: 'Software Architecture & Integrations', items: ['Microservices', 'REST Services', 'JWT', 'OAuth 2.0', 'Keycloak', 'Maven', 'Git', 'SVN', 'Modular Monoliths', 'Firebase Authentication', 'Gradle'] },
         { title: 'Cloud & DevOps', items: ['AWS (S3, EC2, SQS, CloudFront)', 'Docker', 'Kubernetes', 'Jenkins', 'TeamCity'] },
-        { title: 'AI Engineering & Agentic Development', items: ['AI Agent Skills', 'Agentic AI Workflows', 'AI-Assisted Software Development', 'AI-Assisted Code Review', 'OpenAI Codex', 'GitHub Copilot', 'Claude Code'] },
-        { title: 'MCP & AI Agent Integrations', items: ['Model Context Protocol (MCP)', 'MCP Server Integrations', 'MCP Tool Development'] },
-        { title: 'Messaging & Asynchronous Systems', items: ['RabbitMQ', 'Asynchronous Messaging', 'Message Producers / Consumers', 'Dead-Letter Queues (DLQ)', 'Message Routing'] },
+        { title: 'AI Engineering & Agentic Development', items: ['AI Agent Skills', 'Agentic AI Workflows', 'AI-Assisted Software Development', 'AI-Assisted Code Review', 'OpenAI Codex', 'GitHub Copilot', 'Claude Code', 'Spec-Driven Development', 'Root Cause Analysis'] },
+        { title: 'MCP & AI Agent Integrations', items: ['Model Context Protocol (MCP)', 'MCP Server Development', 'MCP Tool Development'] },
+        { title: 'Messaging & Asynchronous Systems', items: ['RabbitMQ', 'Asynchronous Messaging', 'Message Producers / Consumers', 'Dead-Letter Queues (DLQ)', 'Message Routing', 'Parking Lot Queues (PLQ)', 'Apache Kafka'] },
         { title: 'Frontend & Other Technologies', items: ['ReactJS', 'Typescript', 'NextJS', 'Javascript', 'Karma', 'Enzyme'] }
       ],
       experience: [
         {
-          company: 'Contractor',
-          title: 'Senior Java Software Consultant',
+          company: 'QAT Global',
+          title: 'Software Engineer',
           period: 'OCT 2024 – Present',
           location: 'Costa Rica',
           bullets: [
-            'Maintained an existing application and developed new REST APIs with Java 17 and Spring.',
-            'Refactored React class components into functional components and implemented unit tests with Karma and Enzyme.',
-            'Developed and optimized stored procedures for MySQL and MSSQL.',
-            'Applied Agile delivery practices and used Docker, Kubernetes, and TeamCity for CI/CD.',
-            'Designed and developed custom Model Context Protocol (MCP) tools and customer-facing integrations that let AI agents interact with application capabilities, APIs, and external services.',
-            'Applied AI-assisted and agentic software engineering with OpenAI Codex, GitHub Copilot, and Claude Code across implementation, analysis, refactoring, and code review, validating AI-generated and AI-modified code with engineering judgment.',
-            'Developed reusable AI Agent Skills to extend agent capabilities, define repeatable workflows, and standardize engineering task automation.',
-            'Configured RabbitMQ producers, consumers, message routing, dead-letter queues (DLQs), and poison-message handling for asynchronous processing.'
+            'Contributed to an internal Model Context Protocol (MCP) server and developed custom MCP tools, applying software engineering best practices and security considerations.',
+            'Used GitHub Copilot and OpenAI Codex for implementation, debugging, refactoring, and AI-assisted code reviews; created reusable agent skills for root cause analysis, minimal-impact fixes, and pull request preparation.',
+            'Applied Spec-Driven Development to define requirements and implementation specifications for AI-assisted engineering workflows.',
+            'Developed and maintained Java 17 and Spring REST APIs and React features; migrated class components to functional components and implemented Java and React unit tests using JUnit, Mockito, Karma, and Enzyme.',
+            'Developed and optimized stored procedures for MySQL and MSSQL; worked with Agile practices, Docker, Kubernetes, and TeamCity for CI/CD.'
           ],
-          tech: ['Java 17', 'Spring', 'React', 'Karma', 'Enzyme', 'MySQL', 'MSSQL', 'Docker', 'Kubernetes', 'TeamCity', 'MCP', 'RabbitMQ', 'OpenAI Codex', 'GitHub Copilot', 'Claude Code']
+          tech: ['Java 17', 'Spring', 'React', 'Karma', 'Enzyme', 'MySQL', 'MSSQL', 'Docker', 'Kubernetes', 'TeamCity', 'MCP', 'OpenAI Codex', 'GitHub Copilot', 'JUnit', 'Mockito', 'Agent Skills', 'Spec-Driven Development']
         },
         {
-          company: 'Freelance',
-          title: 'Senior Java Software Engineer (Freelance)',
+          company: 'Sparq',
+          title: 'Software Engineer',
+          period: 'MAR 2026 – OCT 2026',
+          location: 'Costa Rica',
+          bullets: [
+            'Designed, developed, and maintained Java microservices, contributing to backend architecture and technical development decisions.',
+            'Configured RabbitMQ producers, consumers, dead-letter queues (DLQ), and parking lot queues (PLQ) in Java for asynchronous processing and message failure handling.',
+            'Provided technical leadership and guidance to one software engineer; defined requirements, broke down tasks, and created development tickets.',
+            'Used Claude Code across implementation, debugging, architectural analysis, and planning, and created custom skills to standardize development workflows.',
+            'Developed SQL scripts to identify and clean up duplicate records and restore data consistency.'
+          ],
+          tech: ['Java', 'Microservices', 'RabbitMQ', 'DLQ / PLQ', 'SQL', 'Claude Code', 'Custom Skills', 'Technical Leadership']
+        },
+        {
+          company: 'Self-employed',
+          title: 'Independent Software Engineer',
           period: 'APR 2023 – OCT 2024',
           location: 'Remote',
           bullets: [
-            'Led the design of a robust Microservices Architecture and corresponding database models.',
-            'Implemented Keycloak for user access management and secured all application endpoints.',
-            'Managed file storage on AWS S3, utilizing AWS CloudFront for secure content delivery and exposure.',
-            'Developed solutions using Java 17, Spring Boot, Spring Security, Docker, and the React/NextJS stack with Tailwind CSS.'
+            'Independently designed and developed a personal full-stack product that was not launched, evaluating architectural patterns and technology choices.',
+            'Built backend functionality with Java 17, Spring Boot, MVC, Data, Security, Cloud, Hibernate, and MySQL; transitioned from microservices to a modular monolith to simplify the architecture.',
+            'Evaluated OAuth 2.0, Keycloak, and Firebase Authentication for authentication and authorization; explored Apache Kafka for asynchronous messaging.',
+            'Developed React and Next.js interfaces integrated with REST APIs, evaluated S3-compatible object storage, and wrote Python scripts for development automation and technical experimentation.',
+            'Managed architecture, implementation, and troubleshooting independently, using Maven, Gradle, Docker, and Tailwind CSS.'
           ],
-          tech: ['Java 17', 'Spring Boot', 'Spring Security', 'Keycloak', 'AWS S3', 'CloudFront', 'Docker', 'React', 'NextJS', 'Tailwind']
+          tech: ['Java 17', 'Spring Boot / MVC / Data / Security / Cloud', 'Hibernate', 'MySQL', 'OAuth 2.0', 'Keycloak', 'Firebase Authentication', 'React', 'Next.js', 'Kafka (exploratory)', 'S3', 'Python', 'Maven', 'Gradle', 'Docker', 'Tailwind CSS']
         },
         {
           company: 'Gorilla Logic',
